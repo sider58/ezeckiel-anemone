@@ -1,4 +1,4 @@
-# ezek-anemone
+# ezeckiel_comme_le_ciel - anemone 2023
 
 Two pages that visualised one of my beloved friend's mixtape project available since a few years now, check this out !
 
