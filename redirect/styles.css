@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+audio {
+    display: none;
+}
+
+video {
+    position: fixed;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    animation: taDa 3s ease-in;
+}
+
+.dlc-hebrew-bg {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.dlc-logo {
+    position: absolute;
+    top: 3.5vw;
+    right: 3.75vw;
+    width: min(9vw, 350px);
+    animation: taDa 2.5s ease-in;
+}
+
+.container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: cloudFloatation 5s ease infinite;
+}
+
+.carried-links {
+    position: absolute;
+    z-index: -1;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    animation: taDa 1s ease-in;
+}
+
+.left-hand, .right-hand {
+    max-width: 175px;
+    height: 150px;
+}
+
+.youtube, .soundcloud {
+    display: block;
+}
+
+.soundcloud {
+    position: absolute;
+    top: -17.5px;
+    left: 20px;
+    max-width: 50px;
+    content: url(files/icons/soundcloud-pxl.svg);
+    cursor: pointer;
+}
+
+.youtube {
+    position: absolute;
+    top: -7.5px;
+    right: 20px;
+    max-width: 45px;
+    content: url(files/icons/youtube-pxl.svg);
+    cursor: pointer;
+}
+
+.cloud {
+    width: 30%;
+    min-width: 350px;
+    max-width: 1250px;
+    margin: 0 auto;
+    content: url(files/icons/dlc-cloud.svg);
+}
+
+@keyframes taDa {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes cloudFloatation {
+    
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 12px;
+    }
+}
+
+@media screen and (min-width: 2490px) {
+
+    .cloud {
+        width: 37.5%;
+    }
+
+    .soundcloud {
+        top: -30px;
+        left: 60px;
+        max-width: 120px;
+    }
+    
+    .youtube {
+        top: -5px;
+        right: 50px;
+        max-width: 115px;
+    }
+
+    .right-hand, .left-hand {
+        max-width: 650px;
+        height: 425px;
+    }
+}
+
+@media screen and (min-width: 1890px) and (max-width: 2490px) {
+
+    .cloud {
+        width: 35%;
+    }
+
+    .soundcloud {
+        top: -30px;
+        left: 45px;
+        max-width: 95px;
+    }
+    
+    .youtube {
+        top: -20px;
+        right: 35px;
+        max-width: 100px;
+    }
+
+    .right-hand, .left-hand {
+        max-width: 385px;
+        height: 325px;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1890px) {
+
+    .right-hand, .left-hand {
+        max-width: 225px;
+        height: 200px;
+    }
+
+    .soundcloud {
+        max-width: 60px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .carried-links {
+        bottom: 40%;
+    }
+    
+    .cloud {
+        width: 75%;
+        min-width: unset;
+    }
+
+    .soundcloud {
+        top: 11.5px;
+        left: 15px;
+        max-width: 35px;
+    }
+    
+    .youtube {
+        top: 15.5px;
+        right: 42.5px;
+        max-width: 35px;
+    }
+
+    .right-hand, .left-hand {
+        width: 75%;
+    }
+}

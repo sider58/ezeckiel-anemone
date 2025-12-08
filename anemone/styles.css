@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(files/gif/other-gif.gif);
+    background-size: cover;
+}
+
+audio {
+    display: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+video {
+    position: fixed;
+    z-index: -1;
+    margin: auto 0;
+    width: 100vw;
+}
+
+.redirect-link {
+    margin: 0 auto;
+    width: 82.5%;
+    content: url(files/icons/anemone-link.svg);
+    transition: 0.5s ease-out;
+}
+
+.redirect-link:hover {
+    transform: scale(1.05);
+}
+
+.dlc-capuche-maille {
+    position: fixed;
+    left: 2vw;
+    width: min(85px, 6.5vw);
+    content: url(files/icons/dlc-capuche-maille-high2.svg);
+}
+
+.dlc {
+    margin: auto 0;
+    padding-right: 1.5vw;
+    height: min(45vw, 80vh);
+    content: url(files/icons/dlc.svg);
+    animation: dlcRotation 5s linear infinite;
+}
+
+@keyframes taDa {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes dlcRotation {
+    
+    from {
+        transform: rotateY(360deg)
+    }
+
+    to {
+        transform: rotateX(0deg)
+    }
+}
+
+@media screen and (min-width: 1350px) {
+
+    .dlc-capuche-maille {
+        content: url(files/icons/dlc-capuche-maille_1.svg);
+        height: 15vw;
+        width: 6.5vw;
+        top: 69vh;
+    }
+}
+
+@media screen and (min-width: 760px) {
+
+    video {
+        animation: taDa 1.75s ease-in-out;
+    }
+
+    .dlc-capuche-maille {
+        animation: taDa 1.75s ease-in-out;
+    }
+
+    .dlc {
+        animation: dlcRotation 7.5s linear infinite, taDa 1.75s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    
+    video {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .dlc {
+        height: 50vh;
+    }
+
+    .dlc-capuche-maille {
+        bottom: 20px;
+        left: 25px;
+        width: 65px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .dlc-capuche-maille {
+        width: 10vw;
+        left: 5vw;
+    }
+
+    .dlc {
+        height: 42vh;
+    }
+}
