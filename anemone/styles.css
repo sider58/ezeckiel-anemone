@@ -6,8 +6,34 @@ body {
     background-size: cover;
 }
 
-audio {
+.audio {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.audio img {
+    display: block;
+    width: 25px;
+    height: 20px;
+}
+
+.audio img.icon-removed {
     display: none;
+}
+
+.audio h2 {
+    font-family: fantasy;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0 0 0 5px; 
 }
 
 main {
@@ -115,6 +141,10 @@ video {
 }
 
 @media screen and (max-width: 550px) {
+
+    .audio {
+        display: none;
+    }
 
     .dlc-capuche-maille {
         width: 10vw;
