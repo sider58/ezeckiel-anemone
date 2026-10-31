@@ -41,7 +41,7 @@ main {
     align-items: center;
     height: 100vh;
     height: 100dvh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -70,9 +70,12 @@ video {
 
 .dlc-capuche-maille {
     position: fixed;
+    z-index: -1;
     left: 2vw;
-    width: min(85px, 6.5vw);
-    content: url(files/icons/dlc-capuche-maille-high2.svg);
+    bottom: 1vw;
+    width: 6.5vw;
+    min-width: 85px;
+    content: url(files/icons/dlc-capuche-maille_1.svg);
 }
 
 .dlc {
@@ -104,16 +107,6 @@ video {
     }
 }
 
-@media screen and (min-width: 1350px) {
-
-    .dlc-capuche-maille {
-        content: url(files/icons/dlc-capuche-maille_1.svg);
-        height: 15vw;
-        width: 6.5vw;
-        top: 69vh;
-    }
-}
-
 @media screen and (min-width: 760px) {
 
     video {
@@ -137,7 +130,8 @@ video {
     .dlc-capuche-maille {
         bottom: 20px;
         left: 25px;
-        width: 65px;
+        width: 12.5vw;
+        min-width: unset;
     }
 }
 
@@ -145,11 +139,6 @@ video {
 
     .audio h2 {
         display: none;
-    }
-
-    .dlc-capuche-maille {
-        width: 10vw;
-        left: 5vw;
     }
 
     .dlc {
