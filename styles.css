@@ -128,12 +128,6 @@ video {
 }
 
 @media screen and (max-width: 760px) {
-    
-    video {
-        height: 100vh;
-        object-fit: cover;
-    }
-
     .dlc {
         height: 50vh;
     }
