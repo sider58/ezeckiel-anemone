@@ -1,3 +1,8 @@
+// To make sure background is played
+const bg = document.querySelector('video')
+
+bg.addEventListener('pause', () => bg.play().catch(() => {}))
+
 let cloud = document.querySelector('.cloud');
 let carriedLinks = document.querySelector('.carried-links');
 

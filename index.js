@@ -1,3 +1,8 @@
+// To make sure background is played
+const bg = document.querySelector('video')
+
+bg.addEventListener('pause', () => bg.play().catch(() => {}))
+
 const myAudioElement = new Audio("files/audio/anemone-waiting-zahere.wav")
 const player = document.querySelector('.audio')
 const imgPause = document.querySelector('.img-pause')
